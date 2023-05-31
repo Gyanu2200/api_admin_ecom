@@ -17,9 +17,8 @@ app.use(express.json());
 connectDB();
 
 //routers
-import registerRouter from "./src/routers/adminRouter.js";
+
 import { connectDB } from "./src/config/dbConfig.js";
-app.use("/api/v1/admin", registerRouter);
 
 app.use("/", (res, req) => {
   res.json({
